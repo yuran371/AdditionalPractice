@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
  class Employee {
 	private String name;
@@ -62,6 +63,14 @@ public class Lambda {
 		testEmployee.printEmployee(Katya);
 		System.out.println("----------");
 		testEmployee.filteringWorkers(list, (Employee e) -> e.getSalary()>10);
+		list.stream()
+		.filter((Employee e) -> e.getSalary()>10)
+//		.collect(Collectors.toList())
+		.map(Employee::getName)
+		.forEach(e->System.out.println(e));
 		
+//		list.stream().map((Employee e) -> e.getSalary()>10)
+//		.collect(Collectors.toList())
+//		.forEach(e->System.out.println(e));
 	}
 }
