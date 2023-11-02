@@ -6,5 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="Java"/>
+	<classpathentry kind="src" path="LeetCode"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
