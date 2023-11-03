@@ -69,6 +69,7 @@ public class Lambda {
 		.map(Employee::getName)
 		.forEach(e->System.out.println(e));
 		
+		
 //		list.stream().map((Employee e) -> e.getSalary()>10)
 //		.collect(Collectors.toList())
 //		.forEach(e->System.out.println(e));
