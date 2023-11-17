@@ -7,5 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="Java"/>
 	<classpathentry kind="src" path="LeetCode"/>
+	<classpathentry kind="src" path="oreillyJava8"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
