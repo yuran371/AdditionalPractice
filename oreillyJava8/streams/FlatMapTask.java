@@ -80,5 +80,13 @@ public class FlatMapTask {
 				.flatMap(x -> x.getOwners().stream())
 				.collect(Collectors.toList());
 		System.out.println(owner3NamesList);
+		
+		
+		System.out.println("---------Third example bellow---------");	
+		int[][] arr = {{1, 2}, {3, 4}, {5, 6}};
+		int [] arrStream = Arrays.stream(arr)
+				.flatMapToInt(x -> Arrays.stream(x))		// or use: .flatMapToInt(Arrays::stream)
+				.toArray();
+		System.out.println(Arrays.toString(arrStream));
 	}
 }
