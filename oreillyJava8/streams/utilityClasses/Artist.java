@@ -1,4 +1,4 @@
-package streams.example3_19;
+package streams.utilityClasses;
 
 import java.util.ArrayList;
 import java.util.Collections;

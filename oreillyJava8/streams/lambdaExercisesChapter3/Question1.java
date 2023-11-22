@@ -1,4 +1,4 @@
-package streams.lambdaExercises;
+package streams.lambdaExercisesChapter3;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,8 +7,8 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import streams.example3_19.Album;
-import streams.example3_19.Artist;
+import streams.utilityClasses.Album;
+import streams.utilityClasses.Artist;
 
 public class Question1 {
 	public static void main(String[] args) {

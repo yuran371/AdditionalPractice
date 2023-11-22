@@ -1,10 +1,10 @@
-package streams.example3_19;
+package streams.utilityClasses;
 
 public class Track {
 	private String name;
 	private int duration;
 	
-	Track (String name, int duration) {
+	public Track (String name, int duration) {
 		this.name = name;
 		this.duration = duration;
 	}

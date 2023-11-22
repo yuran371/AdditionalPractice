@@ -1,4 +1,4 @@
-package streams.example3_19;
+package streams.examplesOfChapter3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,6 +7,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+
+import streams.utilityClasses.Album;
+import streams.utilityClasses.Track;
+
+// example3_19
 
 class LegacyCode {												// class which contains legacy code (without functions)
 	public Set<String> findLongTracks(List<Album> albums) {

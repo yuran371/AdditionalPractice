@@ -1,8 +1,8 @@
-package streams.lambdaExercises;
+package streams.lambdaExercisesChapter3;
 
 import java.util.List;
 
-import streams.example3_19.Artist;
+import streams.utilityClasses.Artist;
 
 /*
  *  Iteration. Convert this code sample from using external iteration to internal iteration:
