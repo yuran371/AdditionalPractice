@@ -8,52 +8,6 @@ import java.util.Set;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-
-class Track {
-	private String name;
-	private int duration;
-	
-	Track (String name, int duration) {
-		this.name = name;
-		this.duration = duration;
-	}
-	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int getDuration() {
-		return duration;
-	}
-	public void setDuration(int duration) {
-		this.duration = duration;
-	}
-
-	@Override
-	public String toString() {
-		return "Track [name=" + name + ", duration=" + duration + "]";
-	}	
-}
-
-class Album {
-	private List<Track> TrackList;
-
-	public List<Track> getTrackList() {
-		return TrackList;
-	}
-
-	public void setTrackList(List<Track> trackList) {
-		TrackList = trackList;
-	}
-
-	@Override
-	public String toString() {
-		return "Album [TrackList=" + TrackList + "]";
-	}
-}
-
 class LegacyCode {												// class which contains legacy code (without functions)
 	public Set<String> findLongTracks(List<Album> albums) {
 		Set<String> trackNames = new HashSet<>();
@@ -68,8 +22,6 @@ class LegacyCode {												// class which contains legacy code (without funct
 		return trackNames;
 	}
 }
-
-
 
 public class RefactoringLegacyCode {
 	public static void main(String[] args) {
@@ -89,12 +41,12 @@ public class RefactoringLegacyCode {
 				new Track("ThreeSecToMars", 3)
 				);
 		List<Album> listOfAlbums = new ArrayList<Album>();
-		Album album1 = new Album();
-		Album album2 = new Album();
-		Album album3 = new Album();
-		album1.setTrackList(listOfTracks1);
-		album2.setTrackList(listOfTracks2);
-		album3.setTrackList(listOfTracks3);
+		Album album1 = new Album(listOfTracks1);
+		Album album2 = new Album(listOfTracks2);
+		Album album3 = new Album(listOfTracks3);
+//		album1.setTrackList(listOfTracks1);
+//		album2.setTrackList(listOfTracks2);
+//		album3.setTrackList(listOfTracks3);
 		listOfAlbums.add(album1);
 		listOfAlbums.add(album2);
 		listOfAlbums.add(album3);
@@ -114,6 +66,5 @@ public class RefactoringLegacyCode {
 		LegacyCode legacyCode = new LegacyCode();
 		System.out.println("legacy code (without functions); tracks which duration more then 1500 sec: " 
 									+ legacyCode.findLongTracks(listOfAlbums));
-		
 	}
 }
