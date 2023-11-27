@@ -1,4 +1,4 @@
-package streams;
+package streams.examplesOfChapter3;
 
 import java.util.Arrays;
 import java.util.Comparator;

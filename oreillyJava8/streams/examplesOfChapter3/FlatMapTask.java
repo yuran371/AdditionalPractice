@@ -1,4 +1,4 @@
-package streams;
+package streams.examplesOfChapter3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -52,9 +52,8 @@ public class FlatMapTask {
 //				String.format("nazvanie: %s cena so skidkoy: %s", x.getName(), (int)x.getPrice()*(0.9))
 				))
 		.forEach(s->System.out.println(s)); // or .forEach(System.out::println);
-		
-		
 		System.out.println();
+		
 		System.out.println("---------Second example bellow---------");		
 		List<Phone> phones = Arrays.asList(									// создаем листы внутри листа
 				new Phone("Samsung", Arrays.asList("Buddy", "Lucy")),
@@ -67,6 +66,7 @@ public class FlatMapTask {
 			owner1NamesList.addAll(ph.getOwners());							// в ownerNamesList добавляем всех владельцев
 		}
 		System.out.println(owner1NamesList);
+		
 		System.out.println("2. map()+flatmap()");
 		List<String> owner2NamesList = phones.stream()
 				.map(ph -> ph.getOwners())
@@ -75,6 +75,7 @@ public class FlatMapTask {
 		System.out.println(owner2NamesList);
 		owner2NamesList.forEach(System.out::print);			// Соединяет все string в одно целое
 		System.out.println();
+		
 		System.out.println("3. only flatmap()");
 		List<String> owner3NamesList = phones.stream()
 				.flatMap(x -> x.getOwners().stream())
