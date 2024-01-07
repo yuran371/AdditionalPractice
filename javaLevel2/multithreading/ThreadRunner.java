@@ -6,12 +6,10 @@ import java.util.Random;
 
 public class ThreadRunner {
 	public static void main(String[] args) throws InterruptedException {
-		List<Integer> linkedList = new LinkedList<>();
-		Thread producerThread = new Thread(new ProducerThread(linkedList));
-		ConsumerThread consumerThread = new ConsumerThread(linkedList);
+		LinkedList<Integer> linkedList = new LinkedList<>();
+		Thread producerThread = new Thread(new ProducerTask(linkedList));
+		ConsumerTask consumerThread = new ConsumerTask(linkedList);
 		producerThread.start();
 		consumerThread.start();
-//		producerThread.join();
-//		consumerThread.join();
 	}
 }
