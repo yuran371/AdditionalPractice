@@ -4,13 +4,13 @@ import java.util.LinkedList;
 import java.util.Random;
 
 public class TaskBroker {
-	LinkedList<Integer> linkedList = new LinkedList<Integer>();
+	LinkedList<Integer> linkedList;
 
 	public TaskBroker(LinkedList<Integer> linkedList) {
 		this.linkedList = linkedList;
 	}
 
-	public synchronized int produce() {
+	public int produce() {
 		while(linkedList.size()<10) {
 			int random = new Random().nextInt(10);
 			linkedList.add(random);
@@ -18,7 +18,7 @@ public class TaskBroker {
 		}
 		return 0;
 	}
-	public synchronized int consume() {
+	public int consume() {
 		while(!linkedList.isEmpty()) {
 			return linkedList.remove();
 		}

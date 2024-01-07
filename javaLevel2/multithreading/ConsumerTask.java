@@ -16,15 +16,22 @@ public class ConsumerTask extends Thread {
 
 	@Override
 	public void run() {
-		try {
-			while (!Thread.currentThread().isInterrupted()) {
-				Thread.sleep(new Random().nextLong(10));
-				int cons = taskBroker.consume();
-				System.out.println(cons + " deleted");
+		synchronized (linkedList) {
+
+			try {
+				while (!Thread.currentThread().isInterrupted()) {
+					long random = new Random().nextLong(3000);
+					int cons = taskBroker.consume();
+					System.out.println(cons + " deleted");
+					System.out.println("consumer wait: " + random);
+					Thread.sleep(random);
+					linkedList.notifyAll();
+					linkedList.wait(random);
+				}
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 

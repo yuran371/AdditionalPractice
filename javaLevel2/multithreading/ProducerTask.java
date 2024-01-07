@@ -1,10 +1,11 @@
 package multithreading;
 
 import java.util.LinkedList;
+import java.util.Random;
 
 public class ProducerTask implements Runnable {
 
-	LinkedList<Integer> linkedList = new LinkedList<Integer>();
+	LinkedList<Integer> linkedList;
 	TaskBroker taskBroker;
 
 	public ProducerTask(LinkedList<Integer> linkedList) {
@@ -14,15 +15,20 @@ public class ProducerTask implements Runnable {
 
 	@Override
 	public void run() {
-		try {
-			while (!Thread.currentThread().isInterrupted()) {
-				Thread.sleep(1);
-				int prod = taskBroker.produce();
-				System.out.println(prod + " added");
+		synchronized (linkedList) {
+			try {
+				while (!Thread.currentThread().isInterrupted()) {
+					long random = new Random().nextLong(10);
+					int prod = taskBroker.produce();
+					System.out.println(prod + " added");
+					System.out.println("prod wait: " + random);
+					linkedList.notifyAll();
+					linkedList.wait(random);
+				}
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 
