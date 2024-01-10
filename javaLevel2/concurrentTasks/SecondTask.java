@@ -24,7 +24,7 @@ public class SecondTask {
 		 */
 		ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
 		ExecutorService fixedThreadPool = Executors.newFixedThreadPool(10);
-		int random1million = new Random().nextInt(44_000_000);
+		int random1million = new Random().nextInt(1000);
 		int arr[] = new int[random1million];
 		for (int i = 0; i < random1million; i++) {
 			int random1to300 = new Random().nextInt(1, 3000);
@@ -37,7 +37,7 @@ public class SecondTask {
 		}).get();
 		fixedThreadPool.submit(() -> {
 			System.out.println(Thread.currentThread().getName());
-			Stream.of(arr).flatMapToInt(Arrays::stream).max().stream().forEach(System.out::println);
+			Stream.of(arr).parallel().flatMapToInt(Arrays::stream).max().stream().forEach(System.out::println);
 			});
 		singleThreadExecutor.shutdown();
 		singleThreadExecutor.awaitTermination(50, TimeUnit.SECONDS);
