@@ -14,13 +14,20 @@ import java.util.regex.Pattern;
  * 2. Написать программу, выполняющую поиск в строке шестнадцатеричных чисел,
  * записанных по правилам Java, с помощью регулярных выражений и выводящую их на
  * страницу.
+ * 
+ * 3. Написать программу, выполняющую поиск в строке всех тегов абзацев, в т.ч.
+ * тех, у которых есть параметры, например
+ * <p id="p1">
+ * , и замену их на простые теги абзацев
+ * <p>
+ * .
  */
 public class RegularExpressions {
 	public static void main(String[] args) {
 		System.out.println("Print № of task(1|2|3):");
 		try (Scanner sc = new Scanner(System.in)) {
 			int task = sc.nextInt();
-			if (task == 1) {
+			if (task == 1) { // является ли введённая строка адресом
 				while (true) {
 					System.out.println("check your email");
 					System.out.println("type your email:");
@@ -38,20 +45,31 @@ public class RegularExpressions {
 					sc.close();
 				}
 			}
-			if (task == 2) {
+			if (task == 2) { // поиск в строке шестнадцатеричных чисел
 				while (true) {
 					System.out.println("check your value for hexadecimal code");
 					System.out.println("type your code:");
-					while(sc.hasNext()) {
+					while (sc.hasNext()) {
 						String input = sc.next();
 						System.out.print("hexadecimals: ");
 						String regex = "[0-9A-F]+";
 						Matcher compile = Pattern.compile(regex).matcher(input);
-						while(compile.find()) {
-							System.out.print(compile.group()+" ");
+						while (compile.find()) {
+							System.out.print(compile.group() + " ");
 						}
 						System.out.println();
 						System.out.println("type your code:");
+					}
+				}
+			}
+			if (task == 3) { // поиск в строке всех тегов
+				while (true) {
+					while (sc.hasNext()) {
+						String input = sc.next();
+						String regex = "(<p .+?>)(.+?<\\/p>)";
+						Matcher matcher = Pattern.compile(regex).matcher(input);
+						StringBuffer sb = new StringBuffer();
+						System.out.print(input.replaceAll(regex, "<p>"));
 					}
 				}
 			}
