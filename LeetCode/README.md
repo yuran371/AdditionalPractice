@@ -9,5 +9,3 @@
 | 1512 |[Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs)| [Java](./arrayHashTableSorting/NumberOfGoodPairs.java) |Easy|
 | 1470 |[Shuffle the Array](https://leetcode.com/problems/number-of-good-pairs)| [Java](./arrayHashTableSorting/ShuffleTheArray.java) |Easy|
 | 2433 |[Find The Original Array of Prefix Xor](https://leetcode.com/problems/find-the-original-array-of-prefix-xor)| [Java](./arrayHashTableSorting/FindTheOriginalArrayOfPrefixXor.java) |Medium|
-| 1637 |[Widest Vertical Area Between Two Points Containing No Points](https://leetcode.com/problems/widest-vertical-area-between-two-points-containing-no-points)| [Java](./arrayHashTableSorting/VerticalAreaBetweenTwoPointsContainingNoPoints.java) |Easy|
-| 2418 |[Sort the People](https://leetcode.com/problems/sort-the-people)| [Java](./arrayHashTableSorting/SortThePeople.java) |Easy|
