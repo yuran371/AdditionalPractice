@@ -12,3 +12,4 @@
 | 1637  |[Widest Vertical Area Between Two Points Containing No Points](https://leetcode.com/problems/widest-vertical-area-between-two-points-containing-no-points)| [Java](./arrayHashTableSorting/VerticalAreaBetweenTwoPointsContainingNoPoints.java) | Easy       | 88.2% |
 | 2418  |[Sort the People](https://leetcode.com/problems/sort-the-people)| [Java](./arrayHashTableSorting/SortThePeople.java) | Easy       | 80.0% |
 | 2706  |[Buy Two Chocolates](https://leetcode.com/problems/buy-two-chocolates)| [Java](./arrayHashTableSorting/BuyTwoChocolates.java) | Easy       | 70.0% |
+| 674   |[Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence)| [Java](./arrayHashTableSorting/LongestContinuousIncreasingSubsequence.java) | Easy       | 50.0%           |
