@@ -14,3 +14,4 @@
 | 2706 |[Buy Two Chocolates](https://leetcode.com/problems/buy-two-chocolates)| [Java](./arrayHashTableSorting/BuyTwoChocolates.java) | Easy | 70.0% |
 | 674  |[Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence)| [Java](./arrayHashTableSorting/LongestContinuousIncreasingSubsequence.java) | Easy       | 50.0% |
 | 462  |[Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii)| [Java](./arrayHashTableSorting/MinimumMovesToEqualArrayElements2.java) | Medium     | 60.0% |
+| 242  |[Valid Anagram](https://leetcode.com/problems/valid-anagram)| [Java](./arrayHashTableSorting/ValidAnagram.java) | Easy | 64.2% |
