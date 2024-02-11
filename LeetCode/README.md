@@ -16,3 +16,4 @@
 | 462  |[Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii)| [Java](./arrayHashTableSorting/MinimumMovesToEqualArrayElements2.java) | Medium     | 60.0%           |
 | 242  |[Valid Anagram](https://leetcode.com/problems/valid-anagram)| [Java](./arrayHashTableSorting/ValidAnagram.java) | Easy | 64.2%           |
 | 49   |[Group Anagrams](https://leetcode.com/problems/group-anagrams)| [Java](./arrayHashTableSorting/GroupAnagrams.java) | Medium | 68.1%           |
+| 347  |[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)| [Java](./arrayHashTableSorting/TopKFrequentElements.java) | Medium | 62.7%           |
