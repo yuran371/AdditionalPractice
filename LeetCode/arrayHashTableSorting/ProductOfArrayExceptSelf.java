@@ -18,11 +18,11 @@ public class ProductOfArrayExceptSelf {
         int[] nums2 = {-1, 1, 0, -3, 3};        // ans = [0,0,9,0,0]
         System.out.println(Arrays.toString(solution(nums)));
         System.out.println(Arrays.toString(solution(nums2)));
-        System.out.println(Arrays.toString(productExceptSelf(nums)));
-        System.out.println(Arrays.toString(productExceptSelf(nums2)));
+        System.out.println(Arrays.toString(solution2(nums)));
+        System.out.println(Arrays.toString(solution2(nums2)));
     }
 
-    private static int[] solution(int[] nums) {
+    private static int[] solution(int[] nums) {     //  O(n^2) - Time Limit Exceeded
         int[] result = new int[nums.length];
         OUTTER:
         for (int i = 0; i < nums.length; i++) {
@@ -39,20 +39,26 @@ public class ProductOfArrayExceptSelf {
         }
         return result;
     }
-    private static int[] productExceptSelf(int[] nums) {
-        int n = nums.length;
-        int ans[] = new int[n];
-        Arrays.fill(ans, 1);
-        int curr = 1;
-        for(int i = 0; i < n; i++) {
-            ans[i] *= curr;
-            curr *= nums[i];
+
+    private static int[] solution2(int[] nums) {    //  O(n) - done
+        int length = nums.length;
+        int[] resultPre = new int[length];
+        int[] resultSuf = new int[length];
+        Arrays.fill(resultPre, 1);
+        Arrays.fill(resultSuf, 1);
+        int temp = 1;
+        for (int i = 0; i < length; i++) {
+            resultPre[i] *= temp;
+            temp *= nums[i];
         }
-        curr = 1;
-        for(int i = n - 1; i >= 0; i--) {
-            ans[i] *= curr;
-            curr *= nums[i];
+        temp = 1;
+        for (int i = length - 1; i >= 0; i--) {         // {1, 2, 3, 4}
+            resultSuf[i] *= temp;
+            temp *= nums[i];
         }
-        return ans;
+        for (int i = 0; i<length; i++){
+            resultPre[i]*=resultSuf[i];
+        }
+            return resultPre;
     }
 }
