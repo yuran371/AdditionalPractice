@@ -18,3 +18,4 @@
 | 49   |[Group Anagrams](https://leetcode.com/problems/group-anagrams)| [Java](./arrayHashTableSorting/GroupAnagrams.java) | Medium | 68.1%           |
 | 347  |[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)| [Java](./arrayHashTableSorting/TopKFrequentElements.java) | Medium | 62.7%           |
 | 238  |[Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)| [Java](./arrayHashTableSorting/ProductOfArrayExceptSelf.java) | Medium | 65.2%           |
+| 36  |[Valid Sudoku](https://leetcode.com/problems/valid-sudoku)| [Java](./arrayHashTableSorting/ValidSudoku.java) | Medium | 59.3%           |
