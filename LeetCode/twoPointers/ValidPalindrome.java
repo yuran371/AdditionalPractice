@@ -38,4 +38,26 @@ public class ValidPalindrome {
         System.out.println(sb + " " + reverse);
         return false;
     }
+
+    private static boolean solution2(String s) {
+        String lowerCase = s.toLowerCase();
+        int i = 0;
+        int j = s.length() - 1;
+        while (i < j) {
+            char iChar = lowerCase.charAt(i);
+            char jChar = lowerCase.charAt(j);
+            if (!Character.isLetterOrDigit(iChar)) {      // "!wefwe  ewqrqwer2r@"
+                i++;
+                continue;
+            }
+            if (!Character.isLetterOrDigit(jChar)) {
+                j--;
+                continue;
+            }
+            if (iChar != jChar) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
