@@ -1,6 +1,7 @@
-### LeetCode Two Pointers
+### LeetCode Stack
 
 
-| # | Title | Solution                         | Difficulty | Acceptance Rate |
-|---| ----- |----------------------------------|------------|-----------------|
-| 20 |[Valid Parentheses](https://leetcode.com/problems/valid-parentheses)| [Java](ValidParentheses.java) | Easy       | 40.5%           |
+| #    | Title | Solution                         | Difficulty | Acceptance Rate |
+|------| ----- |----------------------------------|------------|-----------------|
+| 20   |[Valid Parentheses](https://leetcode.com/problems/valid-parentheses)| [Java](ValidParentheses.java) | Easy       | 40.5%           |
+| 1544 |[Make The String Great](https://leetcode.com/problems/make-the-string-great)| [Java](MakeTheStringGreat.java) | Easy       | 63.1%           |
